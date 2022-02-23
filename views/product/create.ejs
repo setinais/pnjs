@@ -1,0 +1,32 @@
+<%- include("../partials/header"); %>
+
+<h2>Adding new Product</h2>
+
+<form class="form-floating mb-3">
+    
+   <div class="form-floating mb-3">
+        <input type="text" name="name" class="form-control" id="floatingName" placeholder="name@example.com">
+        <label for="floatingName">Product of name</label>
+    </div>
+    <div class="form-floating mb-3">
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Select category of product</option>
+            <% weightTypesView.forEach((weightType) => { %> 
+            <option value="<%= weightType.id %> "><%= weightType.name %> </option>
+            <% }); %> 
+          </select>
+    </div>
+    <div class="form-floating mb-3">
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Select weight menasurement</option>
+            
+          </select>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="number" name="weight" class="form-control" id="floatingWeight" placeholder="Password">
+        <label for="floatingWeight">Product of weight</label>
+    </div>
+    <button type="button" class="btn btn-success">Save</button>
+    <button type="button" class="btn btn-danger">Cancel</button>
+</form>
+  <%- include("../partials/footer"); %> 

@@ -1,0 +1,25 @@
+<%- include("../partials/header"); %>
+    <h2>Products</h2>
+    <a role="button" class="btn btn-info" href="/product/create">New Product</a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            <% exampleView.forEach((value, index) => { %> 
+        <tr>
+            <th scope="row"><%= (index+1) %> </th>
+            <td><%= value.nome %></td>
+            <td><%= value.weight %></td>
+            <td></td>
+        </tr>
+        <% }); %> 
+        </tbody>
+    </table>
+    
+<%- include("../partials/footer"); %>  
